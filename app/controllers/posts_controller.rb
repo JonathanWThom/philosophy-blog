@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
+  ## needs flashes
+
   def index
     @posts = Post.all
   end
@@ -33,6 +35,11 @@ class PostsController < ApplicationController
 
   def show
     ## could this be on the same page but just bring the post front and center?
+  end
+
+  def destroy
+    Post.find(params[:id]).destroy
+    redirect_to dashboard_path
   end
 
   private
