@@ -14,7 +14,20 @@ class PostsController < ApplicationController
     if post.valid?
       redirect_to dashboard_path
     else
-      render :new
+      redirect_to new_post_path
+    end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    if post.update(post_params)
+      redirect_to dashboard_path
+    else
+      redirect_to edit_post_path(post)
     end
   end
 

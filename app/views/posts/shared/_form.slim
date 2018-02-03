@@ -1,0 +1,5 @@
+= simple_form_for @post do |f|
+  = f.input :title
+  = f.hidden_field :body
+  trix-editor class="trix-content" input="post_body"
+  = f.submit
