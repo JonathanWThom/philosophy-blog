@@ -279,7 +279,6 @@ trix-editor .attachment__remove--icon {
     .trix-content .attachment__caption .attachment__name + .attachment__size::before {
       content: ' · '; }
   .trix-content .attachment--preview {
-    width: 100%;
     text-align: center; }
     .trix-content .attachment--preview .attachment__caption {
       color: #666;
