@@ -8,4 +8,3 @@
 // layout file, like app/views/layouts/application.html.erb
 import Trix from '../src/trix'
 import AWS from '../src/aws'
-import Interact from '../src/interact'
