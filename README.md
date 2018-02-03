@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Todo:
+- show posts in correct order
+- google analytics
+- tests
+- front page pagination of sorts w/ stimulusjs
+- Comments?
+- Make it look nice (semantic ui)
+- Be sure to have both build packs when deploying
+- create users once deployed with right credentials
