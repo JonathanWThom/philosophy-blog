@@ -1,1 +1,9 @@
-h3 this is the dashboard
+h2 Dashboard
+
+h3
+  = link_to "New", new_post_path
+
+- @posts.each do |post|
+  h4
+    = post.title
+  = link_to "Edit", edit_post_path(post)

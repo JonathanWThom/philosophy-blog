@@ -17,6 +17,7 @@ gem "jbuilder", "~> 2.5"
 gem "devise"
 gem "factory_bot_rails"
 gem "slim-rails"
+gem "simple_form"
 
 group :development, :test do
   gem "pry-remote"
