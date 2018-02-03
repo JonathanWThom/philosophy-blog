@@ -1,0 +1,8 @@
+h1.ui.header
+  = post.title
+.meta
+  = "#{post.user.name} | "
+  = post.created_at.strftime("%B %e, %Y")
+.ui.divider
+.trix-content
+  = post.body.html_safe

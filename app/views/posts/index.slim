@@ -1,15 +1,6 @@
-h1.ui.header
-  = @featured_post.title
-.meta
-  = "#{@featured_post.user.name} | "
-  = @featured_post.created_at.strftime("%B %e, %Y")
-.ui.divider
-.trix-content
-  = @featured_post.body.html_safe
-
 - @posts.each do |post|
-  h4 = post.title
-  h5 = post.created_at
-  h5 = post.user.name
-  .trix-content
-    = post.body.html_safe
+  = render "posts/show", post: post
+
+#other-posts
+  - if @other_posts
+    = link_to "More", posts_path, remote: :true

@@ -1,0 +1,6 @@
+<% @other_posts.each do |post| %>
+  var post_div = "<%= j render 'posts/show', post: post %>";
+  var htmlObject = document.createElement('div');
+  htmlObject.innerHTML = post_div;
+  document.getElementById("other-posts").appendChild(htmlObject)
+<% end %>
