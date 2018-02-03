@@ -2,9 +2,6 @@ h3 New Post
 
 = simple_form_for Post.new do |f|
   = f.input :title
-  = f.input :body
+  = f.hidden_field :body
+  trix-editor class="trix-content" input="post_body"
   = f.submit
-
-form
-  input id="x" type="hidden" name="content"
-  trix-editor class="trix-content" input="x"

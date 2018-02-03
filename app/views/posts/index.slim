@@ -4,4 +4,5 @@ h2 Philosophy Blog
   h4 = post.title
   h5 = post.created_at
   h5 = post.user.name
-  p = post.body
+  .trix-content
+    = post.body.html_safe
