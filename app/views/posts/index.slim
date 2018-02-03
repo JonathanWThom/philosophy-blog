@@ -1,4 +1,11 @@
-h2 Philosophy Blog
+h1.ui.header
+  = @featured_post.title
+.meta
+  = "#{@featured_post.user.name} | "
+  = @featured_post.created_at.strftime("%B %e, %Y")
+.ui.divider
+.trix-content
+  = @featured_post.body.html_safe
 
 - @posts.each do |post|
   h4 = post.title

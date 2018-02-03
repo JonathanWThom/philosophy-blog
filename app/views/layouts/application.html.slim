@@ -15,5 +15,5 @@ html
         = link_to "Dashboard", dashboard_path
       div
         = link_to "Sign Out", destroy_user_session_path, method: :delete
-
-    = yield
+    .ui.container
+      = yield

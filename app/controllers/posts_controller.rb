@@ -4,7 +4,9 @@ class PostsController < ApplicationController
   ## needs flashes
 
   def index
-    @posts = Post.all
+    ordered_posts = Post.order(created_at: :desc)
+    @featured_post = ordered_posts.first
+    @posts = ordered_posts.where.not(id: @featured_post.id)
   end
 
   def new
