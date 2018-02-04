@@ -23,10 +23,23 @@
   margin: 10px 0 0 0;
 }
 
+.ui.header.title {
+  margin: 20px auto;
+  text-align: center;
+}
+
 #post_title {
   margin-bottom: 10px;
 }
 
 .red {
   color: red;
+}
+
+.ui.menu.nav {
+  border-top: none;
+}
+
+.ui.text.container {
+  margin-top: 7em;
 }

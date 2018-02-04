@@ -1,1 +1,6 @@
-h1.ui.header Necessary Truths
+.ui.fixed.menu.nav
+  h1.ui.header.text-align-center.title Necessary Truths
+
+- if current_user
+  div
+    = link_to "Dashboard", dashboard_path
