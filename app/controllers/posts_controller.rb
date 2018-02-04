@@ -4,14 +4,7 @@ class PostsController < ApplicationController
   ## needs flashes
 
   def index
-    @posts = Post.order(created_at: :desc).limit(5)
-    @other_posts = Post.where.not(id: @posts.pluck(:id)).limit(5)
-    ## I want to load the next 5 always
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    @posts = Post.ordered
   end
 
   def new

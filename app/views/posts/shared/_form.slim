@@ -1,5 +1,5 @@
-= simple_form_for @post do |f|
-  = f.input :title
+= simple_form_for @post, html: { class: "ui form" } do |f|
+  = f.input :title, label: false, placeholder: "Title"
   = f.hidden_field :body
   trix-editor class="trix-content" input="post_body"
-  = f.submit
+  = f.submit "Save", class: "positive ui button posts-button"

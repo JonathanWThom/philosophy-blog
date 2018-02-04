@@ -17,3 +17,16 @@
 .meta {
   color: rgba(0,0,0,.4);
 }
+
+.ui.positive.posts-button {
+  float: right;
+  margin: 10px 0 0 0;
+}
+
+#post_title {
+  margin-bottom: 10px;
+}
+
+.red {
+  color: red;
+}
