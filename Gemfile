@@ -18,6 +18,7 @@ gem "devise"
 gem "factory_bot_rails"
 gem "slim-rails"
 gem "simple_form"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "pry-remote"

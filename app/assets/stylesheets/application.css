@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require font-awesome
  *= require_self
  */
 
@@ -26,6 +27,7 @@
 .ui.header.title {
   margin: 20px auto;
   text-align: center;
+  grid-area: center;
 }
 
 #post_title {
@@ -36,10 +38,25 @@
   color: red;
 }
 
+.nav-center {
+  grid-area: center;
+}
+
 .ui.menu.nav {
   border-top: none;
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  grid-template-areas: "left center right"
 }
 
 .ui.text.container {
   margin-top: 7em;
+}
+
+.nav-right {
+  grid-area: right
+}
+
+.fa-sign-out {
+  font-size: 24px;
 }
