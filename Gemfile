@@ -19,13 +19,13 @@ gem "factory_bot_rails"
 gem "slim-rails"
 gem "simple_form"
 gem "font-awesome-rails"
+gem "faker"
 
 group :development, :test do
   gem "pry-remote"
   gem "rspec-rails"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "shoulda-matchers"
-  gem "faker"
 end
 
 group :development do
