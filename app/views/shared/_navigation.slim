@@ -1,9 +1,10 @@
 .ui.fixed.menu.nav
   h1.ui.header.title.nav-center
-    | Necessary Truths
+    = link_to posts_path do
+      | Necessary Truths
   - if current_user.present?
     .nav-right
+      = link_to dashboard_path do
+        = fa_icon "edit"
       = link_to destroy_user_session_path, method: :delete do
         = fa_icon "sign-out"
-
-/// use css grid for nav

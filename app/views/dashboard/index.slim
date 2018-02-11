@@ -1,5 +1,7 @@
 h2.ui.header
-  = link_to "New Post", new_post_path
+  = link_to "Write Something New", new_post_path
+
+.ui.divider
 
 table.ui.striped.table
   thead
@@ -15,7 +17,7 @@ table.ui.striped.table
         td = post.title
         td = post.author
         td = post.date
-        td = link_to "Edit", edit_post_path(post)
+        td = link_to "Edit", edit_post_path(post), class: "edit"
         td
           = link_to "Delete",
             post_path(post),
