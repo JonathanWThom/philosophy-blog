@@ -1,5 +1,6 @@
 h2.ui.header
-  = post.title
+  = link_to post_path(post) do
+    = post.title
 .meta
   = "#{post.author} | "
   = post.date
