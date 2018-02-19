@@ -1,0 +1,33 @@
+.content-container {
+  margin-top: 7em;
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-template-areas: "content-left content-center content-right";
+}
+
+.content-left {
+  grid-area: content-left;
+}
+
+.content-center {
+  grid-area: content-center;
+}
+
+.content-right {
+  grid-area: content-right;
+}
+
+.ui.text.container {
+  max-width: none !important;
+  display: grid;
+}
+
+@media only screen and (max-width: 767px) {
+  .content-container {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "content-center"
+      "content-left"
+      "content-right";
+  }
+}

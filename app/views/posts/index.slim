@@ -1,6 +1,6 @@
-- @posts.each do |post|
-  = render "posts/show", post: post
+.content-center
+  - @posts.each do |post|
+    = render "posts/show", post: post
 
-#other-posts
-  - if @other_posts
-    = link_to "More", posts_path, remote: :true
+.content-left
+  h3 hey
