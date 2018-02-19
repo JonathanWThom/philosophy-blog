@@ -13,7 +13,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.find(input)
-    find_by_slug!(input)
+    find_by!(slug: input)
   end
 
   def self.ordered
