@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :find_posts, only: [:index, :show]
 
   ## needs flashes
 
   def index
-    @posts = Post.ordered
   end
 
   def new
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    ## could this be on the same page but just bring the post front and center?
+    @post = Post.find(params[:id])
   end
 
   def destroy
@@ -46,5 +46,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+
+  def find_posts
+    @posts = Post.ordered
   end
 end

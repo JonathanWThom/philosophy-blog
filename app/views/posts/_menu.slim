@@ -1,0 +1,6 @@
+- @posts.grouped_by_month.each do |date, posts|
+  h3 = date.strftime("%B %Y")
+  - posts.each do |post|
+    p class=active_post(post)
+      = link_to post_path(post) do
+        = post.title
