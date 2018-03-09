@@ -1,0 +1,10 @@
+- if @books.any?
+  h2 Currently Reading
+  .ui.divider
+  = render "books/book", book: @books.last
+
+- if @other_books.any?
+  h2 Past Books
+  .ui.divider
+  - @other_books.each do |book|
+    = render "books/book", book: book

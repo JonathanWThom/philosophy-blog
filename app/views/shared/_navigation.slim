@@ -1,4 +1,17 @@
 .ui.fixed.menu.nav
+  .nav-left
+    .navigation
+      = link_to "About", about_index_path, class: "margin-40"
+      = link_to "Books", books_path
+
+    .content
+      .ui.inline.dropdown
+      .hamburger.margin-left-20.margin-bottom-20 &#9776;
+      .menu.mobile-menu
+        = link_to "About", about_index_path, class: "item"
+        = link_to "Books", books_path, class: "item"
+
+
   h1.ui.header.title.nav-center
     = link_to root_path do
       | Philosophy Club
@@ -8,3 +21,8 @@
         = fa_icon "edit"
       = link_to destroy_user_session_path, method: :delete do
         = fa_icon "sign-out"
+
+javascript:
+  document.querySelector('.hamburger').addEventListener('click', function(e) {
+    document.querySelector('.mobile-menu').classList.toggle('show');
+  })

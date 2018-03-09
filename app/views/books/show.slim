@@ -1,0 +1,10 @@
+.content-center
+  = render "books/book", book: @book
+
+  - if @book.posts.any?
+    h2 Posts
+    .ui.divider
+    - @book.posts.each do |post|
+      h3
+        = link_to post_path(post) do
+          = post.title

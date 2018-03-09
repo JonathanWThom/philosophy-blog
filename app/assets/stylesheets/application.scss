@@ -38,28 +38,8 @@
   color: red;
 }
 
-.nav-center {
-  grid-area: center;
-}
-
-.ui.menu.nav {
-  border-top: none;
-  display: grid;
-  grid-template-columns: 10% auto 10%;
-  grid-template-areas: "left center right";
-}
-
 .ui.text.container {
   margin-top: 7em;
-}
-
-.nav-right {
-  grid-area: right;
-  margin: auto;
-  i {
-    font-size: 24px;
-    margin-right: 30px;
-  }
 }
 
 .edit {

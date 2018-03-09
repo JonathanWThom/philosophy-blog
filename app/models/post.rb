@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  belongs_to :book
   validates :title, :body, presence: true
   before_create :create_slug
   before_update :create_slug, if: :title_changed?

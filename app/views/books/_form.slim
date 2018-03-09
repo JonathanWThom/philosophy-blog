@@ -1,0 +1,12 @@
+= simple_form_for @book, html: { class: "ui form" } do |f|
+  .margin-bottom-10
+    = f.input :title, label: false, placeholder: "Title"
+  .margin-bottom-10
+    = f.input :author, label: false, placeholder: "Author"
+  .margin-bottom-10
+    = f.input :description, label: false, placeholder: "Description"
+  .margin-bottom-10
+    = f.input :image_link, label: false, placeholder: "Link to Image", as: :url
+  .margin-bottom-10
+    = f.input :color, label: false, prompt: "Tag Color", collection: Book.color_options
+  = f.submit "Save", class: "positive ui button posts-button"
