@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :posts
   get "/dashboard", to: "dashboard#index"
   resources :users, only: [:index]
+  resources :about, only: [:index]
 end

@@ -83,3 +83,9 @@ a:hover {
 .text-align-center {
   text-align: center;
 }
+
+.nav-left {
+  grid-area: left;
+  margin: auto;
+  font-size: 24px;
+}
