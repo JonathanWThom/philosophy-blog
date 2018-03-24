@@ -1,0 +1,12 @@
+.ui.items
+  .item
+    .image
+      = image_tag book.image_link
+    .content
+      .header
+        = link_to book_path(book) do
+          = book.title
+      .meta
+        = book.author
+      .description
+        = book.description

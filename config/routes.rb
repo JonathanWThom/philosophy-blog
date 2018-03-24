@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/dashboard", to: "dashboard#index"
   resources :users, only: [:index]
   resources :about, only: [:index]
+  resources :books
 end

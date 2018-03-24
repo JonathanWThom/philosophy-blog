@@ -1,0 +1,11 @@
+$styles: margin padding;
+$directions: left right top bottom;
+
+@each $style in $styles {
+  @for $i from 0 through 50 {
+    .#{$style}-#{$i} { #{$style}: #{$i}px; }
+    @each $direction in $directions {
+      .#{$style}-#{$direction}-#{$i} { #{$style}-#{$direction}: #{$i}px }
+    }
+  }
+}
