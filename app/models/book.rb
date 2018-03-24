@@ -1,4 +1,7 @@
 class Book < ActiveRecord::Base
+  include Orderable
+  include Sluggable
+
   has_many :posts
 
   validates(
@@ -8,9 +11,6 @@ class Book < ActiveRecord::Base
     :image_link,
     presence: true
   )
-
-  before_create :create_slug
-  before_update :create_slug, if: :title_changed?
 
   def self.color_options
     colors = [
@@ -32,23 +32,5 @@ class Book < ActiveRecord::Base
     colors.map do |color|
       [color.titleize, color]
     end
-  end
-
-  ## share this?
-  def self.ordered
-    order(created_at: :desc)
-  end
-
-  ## share these as well
-  def to_param
-    slug
-  end
-
-  def create_slug
-    self.slug = self.title.parameterize
-  end
-
-  def self.find(input)
-    find_by!(slug: input)
   end
 end
