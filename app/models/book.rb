@@ -12,6 +12,9 @@ class Book < ActiveRecord::Base
     presence: true
   )
 
+  validates :image_link, format: { with: /\.(png|jpg)\Z/i }
+  validates :image_link, format: { with: URI.regexp }
+
   def self.color_options
     colors = [
       "red",

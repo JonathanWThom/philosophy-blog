@@ -2,11 +2,6 @@ class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_posts, only: [:index, :show]
 
-  ## needs flashes
-
-  def index
-  end
-
   def new
     @post = Post.new
   end
