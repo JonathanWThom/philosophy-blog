@@ -14,8 +14,10 @@ class PostsController < ApplicationController
   def create
     post = current_user.posts.create(post_params)
     if post.valid?
+      sweetalert_success("Post was saved")
       redirect_to dashboard_path
     else
+      sweetalert_error(post.errors.full_messages.first)
       redirect_to new_post_path
     end
   end
@@ -25,11 +27,13 @@ class PostsController < ApplicationController
   end
 
   def update
-    post = Post.find(params[:id])
-    if post.update(post_params)
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      sweetalert_success("Post was updated")
       redirect_to dashboard_path
     else
-      redirect_to edit_post_path(post)
+      sweetalert_error(@post.errors.full_messages.first)
+      render :edit
     end
   end
 

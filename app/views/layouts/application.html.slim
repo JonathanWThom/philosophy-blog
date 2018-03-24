@@ -11,7 +11,8 @@ html
     = favicon_link_tag 'books.png'
   body
     = render "shared/navigation"
-    = flash[:notice]
-    = flash[:alert]
+    
     .ui.main.text.container.content-container
+      = render "sweetify/alert"
+
       = yield
