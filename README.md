@@ -31,3 +31,7 @@ I built this blog for us to record our thoughts.
 * AWS
 
 * [Devise](https://github.com/plataformatec/devise)
+
+## Todo
+
+* Continuous integration and deployment
