@@ -17,8 +17,8 @@ class Book < ActiveRecord::Base
 
   def self.color_options
     colors = [
-      "red",
       "orange",
+      "red",
       "yellow",
       "olive",
       "green",

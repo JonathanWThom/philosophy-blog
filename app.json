@@ -1,3 +1,12 @@
 {
-  "name": "philosophy-blog"
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "rake assets:precompile && bundle exec rspec"
+      },
+      "addons":[
+        "heroku-postgresql"
+      ]
+    }
+  }
 }
