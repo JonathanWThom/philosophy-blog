@@ -32,6 +32,8 @@ I built this blog for us to record our thoughts.
 
 * [Devise](https://github.com/plataformatec/devise)
 
+* SweetAlertJS(https://sweetalert.js.org/)
+
 ## Todo
 
 * Continuous integration and deployment
