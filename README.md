@@ -18,6 +18,8 @@ I built this blog for us to record our thoughts.
 
 * Associate posts with books, and find all posts for a given book.
 
+* Continuous Integration & Deployment with Heroku
+
 ## Technology
 
 * Ruby on Rails
@@ -32,8 +34,4 @@ I built this blog for us to record our thoughts.
 
 * [Devise](https://github.com/plataformatec/devise)
 
-* SweetAlertJS(https://sweetalert.js.org/)
-
-## Todo
-
-* Continuous integration and deployment
+* [SweetAlertJS](https://sweetalert.js.org/)
