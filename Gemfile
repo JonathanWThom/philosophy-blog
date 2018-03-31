@@ -21,6 +21,7 @@ gem "simple_form"
 gem "sweetify"
 gem "font-awesome-rails"
 gem "faker"
+gem "bootsnap", require: false
 
 group :development, :test do
   gem "pry-remote"
