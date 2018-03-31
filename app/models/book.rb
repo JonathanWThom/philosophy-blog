@@ -16,21 +16,21 @@ class Book < ActiveRecord::Base
   validates :image_link, format: { with: URI.regexp }
 
   def self.color_options
-    colors = [
-      "orange",
-      "red",
-      "yellow",
-      "olive",
-      "green",
-      "teal",
-      "blue",
-      "violet",
-      "purple",
-      "pink",
-      "brown",
-      "grey",
-      "black"
-    ].sort
+    colors = %W(
+      orange,
+      red,
+      yellow,
+      olive,
+      green,
+      teal,
+      blue,
+      violet,
+      purple,
+      pink,
+      brown,
+      grey,
+      black
+    ).sort
 
     colors.map do |color|
       [color.titleize, color]
