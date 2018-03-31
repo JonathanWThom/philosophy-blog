@@ -1,4 +1,8 @@
 {
+  "name": "Philosophy Club",
+  "scripts": {
+    "postdeploy": "bundle exec db:schema:load db:migrate"
+  },
   "environments": {
     "test": {
       "scripts": {
