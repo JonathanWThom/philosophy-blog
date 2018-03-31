@@ -1,8 +1,8 @@
 {
   "name": "Philosophy Club",
   "scripts": {
-    "postdeploy": "bundle exec db:schema:load db:migrate"
-  },
+    "postdeploy": "pg_dump $DATABASE_URL_FOR_CLONING | psql $DATABASE_URL && bundle exec rake db:migrate"
+  },    
   "environments": {
     "test": {
       "scripts": {
