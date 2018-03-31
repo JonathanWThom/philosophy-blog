@@ -48,6 +48,6 @@ class PostsController < ApplicationController
   end
 
   def find_posts
-    @posts = Post.ordered
+    @posts = Post.includes(:book).ordered
   end
 end
