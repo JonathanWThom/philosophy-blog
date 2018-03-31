@@ -7,7 +7,7 @@ html
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application'
+    = javascript_pack_tag 'application', async: true
     = favicon_link_tag 'books.png'
   body
     = render "shared/navigation"
