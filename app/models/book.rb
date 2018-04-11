@@ -17,18 +17,18 @@ class Book < ActiveRecord::Base
 
   def self.color_options
     colors = %W(
-      orange,
-      red,
-      yellow,
-      olive,
-      green,
-      teal,
-      blue,
-      violet,
-      purple,
-      pink,
-      brown,
-      grey,
+      orange
+      red
+      yellow
+      olive
+      green
+      teal
+      blue
+      violet
+      purple
+      pink
+      brown
+      grey
       black
     ).sort
 
