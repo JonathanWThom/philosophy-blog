@@ -2,10 +2,11 @@ h2.ui.header
   = link_to post_path(post) do
     = post.title
 
-  - if post.book.present?
+- if post.book.present?
+  .post-book-label
     = link_to book_path(post.book) do
-      span.ui.label class=post.book.color
-         = post.book.title
+      .ui.label class=post.book.color
+        = post.book.title
 
 .meta
   = "#{post.author} | "
