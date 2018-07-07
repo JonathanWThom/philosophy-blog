@@ -7,11 +7,11 @@ html
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', async: true
+    = javascript_pack_tag 'application'
     = favicon_link_tag 'books.png'
   body
     = render "shared/navigation"
-    
+
     .ui.main.text.container.content-container
       = render "sweetify/alert"
 

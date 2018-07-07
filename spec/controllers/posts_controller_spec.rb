@@ -23,9 +23,9 @@ describe PostsController, type: :request do
     end
 
     describe "#create" do
-      it "redirects unauthenticated users" do
-        post posts_path
-        expect(response.status).to eq(302)
+      it "denies unauthenticated users" do
+        post posts_path, xhr: true
+        expect(response.status).to eq(401)
       end
     end
 
@@ -40,8 +40,8 @@ describe PostsController, type: :request do
     describe "#update" do
       it "redirects unauthenticated users" do
         post = create(:post)
-        patch post_path(post)
-        expect(response.status).to eq(302)
+        patch post_path(post), xhr: true
+        expect(response.status).to eq(401)
       end
     end
 
@@ -70,7 +70,7 @@ describe PostsController, type: :request do
     describe "#create" do
       it "creates a new post" do
         attributes = build(:post).attributes
-        post posts_path, params: { post: attributes }
+        post posts_path, params: { post: attributes, format: :js }
         expect(Post.count).to eq(1)
       end
     end
@@ -87,7 +87,7 @@ describe PostsController, type: :request do
       it "will update a post" do
         post = create(:post)
         new_title = Faker::Beer.name
-        patch post_path(post), params: { post: { title: new_title } }
+        patch post_path(post), params: { post: { title: new_title }, format: :js }
         post = Post.find_by_id(post.id)
         expect(post.title).to eq(new_title)
       end

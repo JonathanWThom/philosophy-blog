@@ -15,13 +15,10 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.create(book_params)
-    if book.valid?
-      sweetalert_success("Book was saved")
-      redirect_to dashboard_path
-    else
-      sweetalert_error(book.errors.full_messages.first)
-      redirect_to new_book_path
+    @book = Book.create(book_params)
+  
+    respond_to do |format|
+      format.js
     end
   end
 
@@ -31,12 +28,10 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    if @book.update(book_params)
-      sweetalert_success("Book was updated")
-      redirect_to dashboard_path
-    else
-      sweetalert_error(@book.errors.full_messages.first)
-      render :edit
+    @book.update(book_params)
+
+    respond_to do |format|
+      format.js
     end
   end
 

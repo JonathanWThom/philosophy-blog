@@ -1,0 +1,6 @@
+<% if @book.errors.any? %>
+  swal("<%= j @book.errors.full_messages.first.html_safe %>")
+<% else %>
+  swal("Book was updated!")
+  window.location.href = "/dashboard"
+<% end %>

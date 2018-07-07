@@ -1,4 +1,4 @@
-= simple_form_for @post, html: { class: "ui form" } do |f|
+= simple_form_for @post, html: { class: "ui form" }, remote: true do |f|
   = f.input :title, label: false, placeholder: "Title"
   .margin-bottom-10
     = f.input :book_id, collection: Book.all, label: false

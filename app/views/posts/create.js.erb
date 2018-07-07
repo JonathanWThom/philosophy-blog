@@ -1,0 +1,6 @@
+<% if @post.errors.any? %>
+  swal("<%= j @post.errors.full_messages.first.html_safe %>")
+<% else %>
+  swal("Post was created!")
+  window.location.href = "/dashboard"
+<% end %>

@@ -70,7 +70,7 @@ describe BooksController, type: :request do
     describe "#create" do
       it "creates a new book" do
         attributes = build(:book).attributes
-        post books_path, params: { book: attributes }
+        post books_path, params: { book: attributes, format: :js }
         expect(Book.count).to eq(1)
       end
     end
@@ -87,7 +87,7 @@ describe BooksController, type: :request do
       it "will update a book" do
         book = create(:book)
         new_title = Faker::Beer.name
-        patch book_path(book), params: { book: { title: new_title } }
+        patch book_path(book), params: { book: { title: new_title }, format: :js }
         book = Book.find_by_id(book.id)
         expect(book.title).to eq(new_title)
       end
